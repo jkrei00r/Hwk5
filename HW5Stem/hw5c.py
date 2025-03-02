@@ -1,3 +1,5 @@
+#hw5c.py
+#HVS ODEs
 # region imports
 import numpy as np
 from scipy.integrate import solve_ivp  # Import solve_ivp from scipy.integrate
@@ -58,18 +60,18 @@ def main():
 
     # Plot the velocity (xdot) as a function of time
     plt.subplot(2, 1, 1)
-    plt.plot(t, xdot, 'r-', label='$\dot{x}$')
+    plt.plot(t, xdot, 'r-', label=r'$\dot{x}$')  # Use raw string for LaTeX formatting
     plt.title('Velocity as a Function of Time')
-    plt.ylabel('$\dot{x}$')
+    plt.ylabel(r'$\dot{x}$')  # Use raw string for LaTeX formatting
     plt.legend(loc='upper left')
 
     # Plot p1 and p2 as functions of time
     plt.subplot(2, 1, 2)
-    plt.plot(t, p1, 'b-', label='$P_1$')
-    plt.plot(t, p2, 'r-', label='$P_2$')
+    plt.plot(t, p1, 'b-', label=r'$P_1$')  # Use raw string for LaTeX formatting
+    plt.plot(t, p2, 'r-', label=r'$P_2$')  # Use raw string for LaTeX formatting
     plt.title('Pressures as a Function of Time')
     plt.xlabel('Time (s)')
-    plt.ylabel('$P_1, P_2$ (Pa)')
+    plt.ylabel(r'$P_1, P_2$ (Pa)')  # Use raw string for LaTeX formatting
     plt.legend(loc='upper right')
 
     # Show the plots
@@ -82,4 +84,5 @@ def main():
 if __name__ == "__main__":
     main()
 # endregion
+
 
